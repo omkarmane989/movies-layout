@@ -87,6 +87,46 @@ body {
 .sidebar-section {
   border: 1px solid yellow;
 }
+/*///////////////////////////////////// postsection css starts///////////////////////////////////////*/
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post {
+  background-color: var(--color-white);
+  margin-bottom: 20px;
+  background-color: var(--color-grey);
+}
+.post img {
+  width: 100%;
+  /*height: 350px;
+  object-fit: cover;*/
+}
+.post-content h2 {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-primary);
+  text-transform: capitalize;
+  color: var(--color-dark);
+}
+.post-content p {
+  padding: 25px;
+  color: var(--color-dark);
+}
+
+@media all and (min-width: 768) {
+  .posts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .posts.post {
+    width: 49%;
+  }
+}
+
 @media all and (min-width: 1180px) {
   .navbar ul {
     display: flex;
@@ -103,6 +143,21 @@ body {
   }
   .sidebar-section {
     flex: 0 0 400px;
+  }
+  .posts {
+    justify-content: space-between;
+  }
+  .posts .post:nth-child(1),
+  .posts .post:nth-child(2) {
+    width: 49%;
+  }
+  .posts .post:nth-child(3),
+  .posts .post:nth-child(4),
+  .posts .post:nth-child(5) {
+    width: 32%;
+  }
+  .posts .post:last-child {
+    width: 100%;
   }
 }
 
