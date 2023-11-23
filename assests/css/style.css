@@ -77,12 +77,27 @@ body {
 .item {
   flex-grow: 1;
 }
-
+.content-area {
+  flex-direction: column;
+}
+.main-content-area {
+  border: 1px solid red;
+  padding: 10px;
+}
+.sidebar-section {
+  border: 1px solid yellow;
+}
 @media all and (min-width: 1180px) {
   .navbar ul {
     display: flex;
   }
   .navbar li {
+    flex-grow: 1;
+  }
+  .content-area {
+    flex-direction: row;
+  }
+  .main-content-area {
     flex-grow: 1;
   }
 }
