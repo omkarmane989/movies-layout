@@ -117,13 +117,63 @@ body {
   color: var(--color-dark);
 }
 
-@media all and (min-width: 768) {
+/*///////////////////////////////////////////watch now css starts////////////////////////////*/
+
+.watch-card {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.watch-img > img {
+  width: 100%;
+}
+
+.watch-content {
+  padding: 20px;
+  font-weight: bold;
+}
+.watch-content h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+
+.watch-content h3,
+.watch-content p {
+  margin-bottom: 15px;
+}
+.watch-content a {
+  text-decoration: underline;
+  color: var(--color-white);
+}
+
+.watch-content p span {
+  margin-right: 10px;
+}
+
+@media all and (min-width: 768px) {
   .posts {
     flex-direction: row;
     justify-content: space-between;
   }
   .posts.post {
     width: 49%;
+  }
+  .watch-img {
+    flex: 0 0 400px;
+  }
+  .watch-card {
+    flex-direction: row;
+  }
+  .watch-content {
+    align-self: center;
+    padding: 30px;
+  }
+
+  .watch-card:nth-of-type(even) .watch-img {
+    order: 1;
   }
 }
 
