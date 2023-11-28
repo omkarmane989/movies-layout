@@ -81,7 +81,6 @@ body {
   flex-direction: column;
 }
 .main-content-area {
-  border: 1px solid red;
   padding: 10px;
 }
 .sidebar-section {
@@ -153,6 +152,61 @@ body {
   margin-right: 10px;
 }
 
+/*/////////////////////////////////download-card css starts////////////////////////*/
+.download-img img {
+  width: 100%;
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+}
+.download-img {
+  background-color: var(--color-dark);
+}
+.download-link {
+  padding: 20px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.download-info {
+  background-color: var(--color-white);
+  padding: 20px 5px;
+}
+.download-genre {
+  margin-bottom: 15px;
+}
+.download-genre,
+.download-cast {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.download-cast img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.download-rating {
+  background-color: var(--color-primary);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.download-cast h4,
+.download-genre h4 {
+  flex: 0 0 55px;
+  text-transform: capitalize;
+  font-size: 15px;
+  align-self: center;
+}
+
 @media all and (min-width: 768px) {
   .posts {
     flex-direction: row;
@@ -174,6 +228,19 @@ body {
 
   .watch-card:nth-of-type(even) .watch-img {
     order: 1;
+  }
+
+  .download-content {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  .download-info {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  .download-link,
+  .download-rating {
+    flex: 0 0 200px;
   }
 }
 
